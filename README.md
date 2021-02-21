@@ -2,11 +2,12 @@
 
 A pre-configured QEMU & Debian RISC-V image. Allows you to get started working on an emulated RISC-V environment. Is a quick way to see what libraries and frameworks work on RISC-V without sourcing hardware.
 
-Contains:
+Structure:
 
-- QEMU built with RISC-V with soft-mmu support
-- RISC-V u-boot kernel
-- Debian image pre-compiled for RISC-V
+- Debian host (debian:sid)
+  - QEMU. Running as emulated RISC-V with soft-mmu support
+    - Debian guest. RISC-V image
+    - RISC-V u-boot kernel
 
 ## How to use
 
