@@ -11,6 +11,11 @@ Structure:
 
 ## How to use
 
+### Quicker start, with Docker Hub:
+
+Pull and run the image from Docker Hub. Saves you needing to build locally 
+ - <https://hub.docker.com/r/davidburela/riscv-emulator>
+
 ### Quick start:
 
 ```bash
