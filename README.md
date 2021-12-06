@@ -46,7 +46,7 @@ ssh root@localhost -p 2222
 # Start the container, and manually start QEMU with the required specs.
 # replace AAAA with desired cpus (e.g. 2 or 4)
 # replace BBBB with desired RAM (e.g. 2G or 4G)
-docker run -d --publish 127.0.0.1:2222:2222/tcp riscv-emulator qemu-system-riscv64 -smp AAAA -m BBBB -cpu rv64 -nographic -machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf -device virtio-blk-device,drive=hd -drive file=artifacts/image.qcow2,if=none,id=hd -device virtio-net-device,netdev=net -netdev user,id=net,hostfwd=tcp::2222-:22 -object rng-random,filename=/dev/urandom,id=rng -device virtio-rng-device,rng=rng -append "root=LABEL=rootfs console=ttyS0"
+docker run -d --publish 127.0.0.1:2222:2222/tcp davidburela/riscv-emulator qemu-system-riscv64 -smp AAAA -m BBBB -cpu rv64 -nographic -machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf -device virtio-blk-device,drive=hd -drive file=artifacts/image.qcow2,if=none,id=hd -device virtio-net-device,netdev=net -netdev user,id=net,hostfwd=tcp::2222-:22 -object rng-random,filename=/dev/urandom,id=rng -device virtio-rng-device,rng=rng -append "root=LABEL=rootfs console=ttyS0"
 ```
 
 ### Podman
