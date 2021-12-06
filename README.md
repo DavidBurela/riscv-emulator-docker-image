@@ -18,14 +18,20 @@ Pull and run the image from Docker Hub. Saves you needing to build locally
 
 ### Quick start:
 
+#### Get the the image
+
 ```bash
-# 1. Build the image
-docker build -t riscv-emulator .
+# 1 Get the image [2 options]
+# 1A. Pull the image from Docker Hub
+docker pull davidburela/riscv-emulator
+
+# 1B. -OR- build the image locally
+docker build -t davidburela/riscv-emulator .
 
 # 2. 
 # Run with QEMU default of 2CPU & 2G ram. 
 # Expose port 2222 which is routed through into the QEMU RISC-V guest
-docker run -d --publish 127.0.0.1:2222:2222/tcp riscv-emulator
+docker run -d --publish 127.0.0.1:2222:2222/tcp davidburela/riscv-emulator
 
 # 3. SSH directly into the QEMU RISC-V guest, the default password is "root". (Might take a few minutes for guest to start)
 ssh root@localhost -p 2222
