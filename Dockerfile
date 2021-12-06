@@ -1,4 +1,4 @@
-FROM debian:sid
+FROM debian:11
 EXPOSE 2222
 
 # Install all needed packages
