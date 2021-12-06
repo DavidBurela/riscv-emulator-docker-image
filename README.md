@@ -27,7 +27,7 @@ docker build -t riscv-emulator .
 # Expose port 2222 which is routed through into the QEMU RISC-V guest
 docker run -d --publish 127.0.0.1:2222:2222/tcp riscv-emulator
 
-# 3. SSH directly into the QEMU RISC-V guest. (Might take a few minutes for guest to start)
+# 3. SSH directly into the QEMU RISC-V guest, the default password is "root". (Might take a few minutes for guest to start)
 ssh root@localhost -p 2222
 ```
 
