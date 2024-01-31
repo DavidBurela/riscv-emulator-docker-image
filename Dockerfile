@@ -3,7 +3,7 @@ EXPOSE 2222
 
 # Install all needed packages
 RUN apt-get update && \
-apt-get install -y --no-install-recommends ca-certificates git wget build-essential ninja-build libglib2.0-dev libpixman-1-dev u-boot-qemu unzip libslirp-dev && \
+apt-get install -y --no-install-recommends ca-certificates git wget build-essential ninja-build libglib2.0-dev libpixman-1-dev u-boot-qemu unzip libslirp-dev python3-venv && \
 # clean up the temp files
 apt-get autoremove -y && \
 apt-get clean && \
